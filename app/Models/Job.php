@@ -16,4 +16,9 @@ class Job extends Model
         $this->tags()->attach($tag);
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
 }
